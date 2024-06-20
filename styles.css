@@ -52,6 +52,49 @@ button{
     text-decoration: none;
 }
 
+.button-about-the-team{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 20px 45px;
+    border-radius: 50px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(53, 87, 44);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-about-the-team:hover{
+    background-color: rgb(50, 134, 31);
+    transition: 0.5s;
+}
+
+.button-about-the-product{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 20px 45px;
+    border-radius: 50px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(100, 109, 98);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-about-the-product:hover{
+    background-color: rgb(115, 126, 113);
+    transition: 0.5s;
+}
+
+.assets-videos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%; 
+    margin: 10px;
+}
+
 #about-proyect .container{
     text-align: center;
     padding: 200px 12px;
@@ -238,6 +281,21 @@ header .container{
     box-sizing: border-box;
 }
 
+#know-more .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#know-more .text, #know-more .img-container {
+    flex: 1;
+}
+
+#know-more .img-container img {
+    width: 100%;
+    height: auto;
+}
+
 
 @media (min-width: 850px){
 
@@ -311,7 +369,7 @@ header .container{
     }
 
     #about-the-team .member-card{
-    border: 1px solid #ccc;
+        border: 1px solid #ccc;
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
@@ -332,7 +390,6 @@ header .container{
     #about-the-team .member-card h4{
         margin: 10px 0;
     }
-
     header{
         position: fixed;
         width: 100%;
@@ -359,16 +416,6 @@ header .container{
         width: 100%;
     }
 
-    #know-more .text{
-        width: 50%;
-        max-width: 600px;
-        text-align: initial;
-        padding-left: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
     #about-proyect .text{
         width: 50%;
         max-width: 600px;
@@ -382,19 +429,29 @@ header .container{
     #know-more{
         animation: animation-last-move linear;
         animation-timeline: view();
-        animation-range: entry 25% cover 35%;
-        margin-bottom: 0px;
-    }
-
-    #know-more .container{    
-        text-align: initial;
-        padding: 200px 12px;
+        animation-range: entry 30% cover 40%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
     }
 
-    #know-more ul{
-        margin-left: 100px;
+    #know-more .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #know-more .img-container {
+        margin-top: 20px; /* Ajusta este valor según tus necesidades */
+    }
+
+    #know-more .img-container img {
+        width: 100%;
+        max-width: 500px; /* Ajusta este valor según tus necesidades */
+        height: auto;
     }
 
     #about-proyect h2{
@@ -403,15 +460,6 @@ header .container{
 
     #about-proyect .img-container{
         background-image: url("assets/sobre_proyecto.png");
-        background-size: cover;
-        background-position: center center;
-        height: 450px;
-        width: 550px; 
-    }
-
-    /* STYLES FOR IMG IN KNOW MORE SECTION */
-    #know-more .img-container{
-        background-image: url("assets/seccion2.jpg");
         background-size: cover;
         background-position: center center;
         height: 450px;
@@ -482,17 +530,3 @@ footer {
     transition: 0.5s;
     background-color: green;
 }
-
-#know-more .container{
-    text-align: left;
-    padding: 150px 12px;
-    width:100%;
-    margin-left: 5px;
-}
-
-@media (min-width: 1200px) {
-    #know-more{
-        background-position-x: calc(100vw - 800px);
-    }
-}
-
